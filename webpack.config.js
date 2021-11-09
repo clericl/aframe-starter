@@ -15,6 +15,9 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "index.html",
