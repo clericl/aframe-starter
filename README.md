@@ -1,15 +1,15 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 This is a webpacked A-Frame project!
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
+To start the development server, run
 
 ```
-yarn build
+npm run watch
 ```
 
-to bundle your application
+in one terminal and then
+
+```
+./serve/bin/serve.bat -d ./dist
+```
+
+in another (Windows only! Mac users, figure it out 🤷‍♂️)
