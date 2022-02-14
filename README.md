@@ -1,5 +1,11 @@
 # 🚀 This is a webpacked A-Frame project!
 
+To install, run
+
+```
+npm install && cd serve && npm install
+```
+
 To start the development server, run
 
 ```
