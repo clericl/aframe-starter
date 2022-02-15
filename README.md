@@ -9,7 +9,7 @@ cd serve && npm install
 and run the server with
 
 ```
-./serve/bin/serve.bat -d ./
+./serve/bin/serve.bat -d .
 ```
 
 (Windows only! Mac users, figure it out 🤷‍♂️)
