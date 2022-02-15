@@ -1,15 +1,15 @@
 # 🚀 This is an A-Frame project starter!
 
-To install, run
+To start the development server, install with
 
 ```
 cd serve && npm install
 ```
 
-To start the development server, run
+and run the server with
 
 ```
-./serve/bin/serve.bat -d ./dist
+./serve/bin/serve.bat -d .
 ```
 
 (Windows only! Mac users, figure it out 🤷‍♂️)
