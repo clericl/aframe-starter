@@ -19,10 +19,3 @@ cd serve && npm install
 ```
 ./serve/bin/serve.bat -d .
 ```
-
-## Usage
-
-Some customizations are already exposed for your convenience.
-
-### Skinning XRExtras
-
