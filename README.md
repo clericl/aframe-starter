@@ -2,20 +2,16 @@
 
 ## Getting started
 
-First, make sure that you've created a corresponding project in 8th Wall. Grab the App Key provided under the Settings page for that project. Use this template to spin up the GitHub repository for your new project and replace the `XXXXX` in line 16 of `index.html` with your App Key. You're ready to rumble!
+First, make sure that you've created a corresponding project in 8th Wall. Grab the App Key provided under the Settings page for that project and replace the `XXXXX` in line 16 of `index.html` with your App Key.
 
-### Development server
-
-From the root directory, you can:
-
-- install
-
+Next, install packages.
 ```
-cd serve && npm install
+npm install
 ```
 
-- run (Windows only! Mac users, figure it out 🤷‍♂️)
+Run the development server.
+```
+npm start
+```
 
-```
-./serve/bin/serve.bat -d .
-```
+You're ready to rumble!
