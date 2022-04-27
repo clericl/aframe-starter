@@ -9,10 +9,8 @@ module.exports = {
     index: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[hash].js',
-    // Use absolute paths for assets
-    publicPath: '/',
+    path: __dirname + '/dist',
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -23,7 +21,7 @@ module.exports = {
         }
       },
       {
-        test: /\.(jpe?g|png|mp3|wav)$/,
+        test: /\.(jpe?g|png|mp3|wav|mp4)$/,
         use: [
           {
             loader: 'file-loader',
@@ -49,8 +47,6 @@ module.exports = {
       filename: 'index.html',
       // Inject compiled JS into <head> (as per A-Frame docs)
       inject: 'head',
-      // Specify which JS files, by key in `entry`, should be injected into the page
-      chunks: ['global', 'index'],
     }),
   ],
   // Settings for webpack-dev-server
