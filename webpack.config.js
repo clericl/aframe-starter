@@ -15,22 +15,32 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
-        use: {
-          loader: 'html-loader',
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          sources: {
+            list: [
+              '...',
+              {
+                tag: 'a-asset-item',
+                attribute: 'src',
+                type: 'src',
+              }
+            ]
+          }
         }
       },
       {
-        test: /\.(jpe?g|png|mp3|wav|mp4)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[ext]?[hash:7]',
-              context: 'src',
-            },
-          },
-        ],
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpe?g|png|mp3|wav|mp4)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(glb|gltf)$/i,
+        type: 'asset/resource',
       },
     ]
   },
