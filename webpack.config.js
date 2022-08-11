@@ -57,6 +57,7 @@ module.exports = {
       filename: 'index.html',
       // Inject compiled JS into <head> (as per A-Frame docs)
       inject: 'head',
+      scriptLoading: 'blocking',
     }),
   ],
   // Settings for webpack-dev-server
