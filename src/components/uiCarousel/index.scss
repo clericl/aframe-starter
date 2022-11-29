@@ -1,0 +1,43 @@
+@use '../../styles/constants.scss' as *;
+
+.carousel-container {
+  @include flex(column);
+
+  align-items: flex-end;
+  width: 100%;
+  z-index: 798;
+  overflow: visible;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .flickity-viewport {
+    overflow: visible;
+  }
+}
+
+#carousel {
+  width: 100%;
+  padding: 5%;
+}
+
+.carousel-cell {
+  @include flex;
+
+  margin-right: 5%;
+
+  &.carousel-selected::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border: 2px solid white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

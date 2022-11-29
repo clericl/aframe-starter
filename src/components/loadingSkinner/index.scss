@@ -1,0 +1,69 @@
+@use '../../styles/constants.scss' as *;
+
+:root {
+  --primarycolor: #4b4768;
+  --secondarycolor: #3a3c55;
+  --backgroundcolor: #12101b;
+  --primarybuttoncolor: #ac4fff;
+  --secondarybuttoncolor: #8083a2;
+  --textcolor: #fcfeff;
+  --fontfamily: 'Nunito-SemiBold', sans-serif;
+}
+
+#requestingCameraPermissions {
+  background-color: var(--primarycolor);
+}
+
+div.prompt-box-8w.prompt-box-8w {
+  background-color: var(--secondarycolor);
+}
+
+#loadingContainer {
+  background-color: var(--backgroundcolor);
+}
+
+button.button-primary-8w.button-primary-8w, .main-button {
+  background-color: var(--primarybuttoncolor);
+}
+
+button.prompt-button-8w.prompt-button-8w {
+  background-color: var(--secondarybuttoncolor);
+}
+
+#loadingContainer *, .prompt-box-8w * {
+  color: var(--textcolor);
+  font-family: var(--fontfamily);
+}
+
+// #requestingCameraIcon {
+//   width: 0;
+// }
+
+// #requestingCameraPermissions::after {
+//   display: block;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   content: '';
+//   height: 5vh;
+//   z-index: 800;
+//   margin: 0 auto;
+//   background: url('/camera.png') center/contain no-repeat;
+//   transform: translateY(75%);
+// }
+
+// img#loadImage {
+//   display: none;
+// }
+
+// div#loadImageContainer::after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 50vw;
+//   height: 50vw;
+//   background: url('/loader.gif') center/contain no-repeat;
+//   transform: translate(-50%, -50%);
+// }
