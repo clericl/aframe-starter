@@ -16,10 +16,9 @@ const proximityTriggerComponent = {
     this.el.addEventListener('exitedproximity', this.handleExitedProximity)
   },
   tick() {
-    const thresholdSquared = Math.pow(this.data.threshold, 2)
-    this.el.object3D.getWorldPosition(this.worldPosition)
-
     if (this.camera) {
+      const thresholdSquared = Math.pow(this.data.threshold, 2)
+      this.el.object3D.getWorldPosition(this.worldPosition)
       this.camera.object3D.getWorldPosition(this.cameraPosition)
 
       const compA = new THREE.Vector3(this.worldPosition.x, 0, this.worldPosition.z)
