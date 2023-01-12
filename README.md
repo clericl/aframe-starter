@@ -3,9 +3,6 @@
 ## Table of contents
 1. [Getting started](#getting-started)
 2. [Preregistered components](#preregistered-components)
-
----
-
 ## Getting started
 
 First, make sure that you've created a corresponding project in 8th Wall. Grab the App Key provided under the Settings page for that project and replace the `XXXXX` in line 16 of `index.html` with your App Key.
@@ -22,7 +19,6 @@ npm start
 
 You're ready to rumble!
 
----
 ## Preregistered Components  
 ### `landingPage`  
 Style the landing page.
