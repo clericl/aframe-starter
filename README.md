@@ -3,6 +3,7 @@
 ## Table of contents
 1. [Getting started](#getting-started)
 2. [Preregistered components](#preregistered-components)
+2. [Troubleshooting](#troubleshooting)
 ## Getting started
 
 First, make sure that you've created a corresponding project in 8th Wall. Grab the App Key provided under the Settings page for that project and replace the `XXXXX` in line 16 of `index.html` with your App Key.
@@ -71,3 +72,12 @@ Add a swipeable carousel to the bottom of the screen. You may use multiple `uiCa
 | Event | Detail | Description |
 | ----- | ----- | ----- |
 | `carouselchanged` | `{ newIndex: number }` | Emitted when the carousel updates the currently selected index. |
+
+## Troubleshooting
+```
+ReferenceError: AFRAME is not defined
+```
+Getting this in your console? Update the version numbers of the core scripts in `index.html`. The 8th Wall CDN versions of each are updated whenever the base repository they are forked from are updated, so you can find the most up-to-date version numbers there:
+- https://github.com/8thwall/8frame
+- https://github.com/c-frame/aframe-extras
+
