@@ -77,7 +77,6 @@ Add a swipeable carousel to the bottom of the screen. You may use multiple `uiCa
 ```
 ReferenceError: AFRAME is not defined
 ```
-Getting this in your console? Update the version numbers of the core scripts in `index.html`. The 8th Wall CDN versions of each are updated whenever the base repository they are forked from are updated, so you can find the most up-to-date version numbers there:
+Getting this in your console? Update the version numbers of the core scripts in `index.html`. The 8th Wall CDN versions of each are updated whenever the base repository they are forked from are updated, so you can head over to find the most up-to-date version numbers:
 - https://github.com/8thwall/8frame
 - https://github.com/c-frame/aframe-extras
-
