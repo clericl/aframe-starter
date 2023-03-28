@@ -4,7 +4,7 @@
   "description": "Starter template for A-Frame/8th Wall projects.",
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack serve",
     "build": "webpack"
   },
   "repository": {

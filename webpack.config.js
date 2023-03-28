@@ -64,5 +64,6 @@ module.exports = {
   devServer: {
     https: true,
     open: true,
+    hot: true,
   },
 };

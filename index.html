@@ -2,56 +2,96 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>A-Frame App</title>
+	<title>A-Frame App</title>
 
-    <script src="//cdn.8thwall.com/web/aframe/8frame-1.4.0.min.js"></script>
-    <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
-    <script src="//cdn.8thwall.com/web/aframe/aframe-extras-6.1.1.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script src="//cdn.8thwall.com/web/aframe/8frame-1.4.1.min.js"></script>
+	<script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
+	<script src="//cdn.8thwall.com/web/aframe/aframe-extras-6.1.1.min.js"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-    <!-- 8thWall Web - Replace the app key here with your own app key -->
-    <script async src="//apps.8thwall.com/xrweb?appKey=XXXXX"></script>
-    
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<!-- 8thWall Web - Replace the app key here with your own app key -->
+	<script async src="//apps.8thwall.com/xrweb?appKey=oGgldgiSKLEH3DcHKcbdjFDLeMhZbJAViCDxXn1peJAzNjTEjWK8dr8AblSePWL0162Vqs"></script>
+	
+	<link rel="stylesheet" href="/index.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 
 <body>
-    <a-scene
-        renderer="colorManagement: true;"
-        vr-mode-ui="enabled: false;"
-        xrextras-almost-there
-        xrextras-gesture-detector
-        xrextras-loading
-        xrextras-runtime-error
-        xrweb
-    >
-        <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
-        <a-camera
-            cursor="fuse: false; rayOrigin: mouse;"
-            id="camera"
-            position="0 6 2"
-            raycaster="objects: .cantap"
-        >
-        </a-camera>
+	<div id="ui-carousel">
+		<div class="carousel-item">
+			<img id="thumb-0" src="./src/assets/thumbnails/0.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-1" src="./src/assets/thumbnails/1.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-2" src="./src/assets/thumbnails/2.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-3" src="./src/assets/thumbnails/3.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-4" src="./src/assets/thumbnails/4.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-5" src="./src/assets/thumbnails/5.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-6" src="./src/assets/thumbnails/6.png" />
+		</div>
+		<div class="carousel-item">
+			<img id="thumb-7" src="./src/assets/thumbnails/7.png" />
+		</div>
+	</div>
 
-        <!-- We can define assets here to be loaded when A-Frame initializes -->
-        <a-assets timeout="3000"></a-assets>
+	<a-scene
+		renderer="colorManagement: true;"
+		selection-manager
+		ui-carousel="container: #ui-carousel"
+		vr-mode-ui="enabled: false;"
+		xrextras-almost-there
+		xrextras-gesture-detector
+		xrextras-loading
+		xrextras-runtime-error
+		xrweb="allowedDevices: any;"
+	>
+		<!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
+		<a-camera
+			cursor="fuse: false; rayOrigin: mouse;"
+			id="camera"
+			position="0 6 2"
+			raycaster="objects: .cantap"
+		>
+		</a-camera>
 
-        <!-- Adding the cantap class allows the ground to be clicked -->
-        <a-box
-            id="ground"
-            class="cantap"
-            scale="1000 2 1000"
-            position="0 -0.99 0"
-            material="shader: shadow; transparent: true; opacity: 0.4"
-            shadow
-        ></a-box>
-    </a-scene>
+		<!-- We can define assets here to be loaded when A-Frame initializes -->
+		<a-assets timeout="15000">
+			<video src="./src/assets/videos/0.mp4" id="video-0" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/1.mp4" id="video-1" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/2.mp4" id="video-2" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/3.mp4" id="video-3" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/4.mp4" id="video-4" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/5.mp4" id="video-5" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/6.mp4" id="video-6" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+			<video src="./src/assets/videos/7.mp4" id="video-7" class="video-asset" crossorigin="anonymous" muted autoplay preload="auto" playsinline loop></video>
+		</a-assets>
+
+		<a-entity id="cursor" tap-place-cursor></a-entity>
+
+		<!-- Adding the cantap class allows the ground to be clicked -->
+		<a-box
+			id="ground"
+			class="cantap"
+			scale="1000 2 1000"
+			position="0 -0.99 0"
+			material="shader: shadow; transparent: true; opacity: 0.4"
+			shadow
+		></a-box>
+	</a-scene>
 </body>
 
 </html>

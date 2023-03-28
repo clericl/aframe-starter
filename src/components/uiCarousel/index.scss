@@ -1,15 +1,14 @@
 @use '../../styles/constants.scss' as *;
 
 .carousel-container {
-  @include flex(column);
+  @include flex(column, $align: flex-end);
 
-  align-items: flex-end;
   width: 100%;
   z-index: 798;
   overflow: visible;
   box-sizing: border-box;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
 
   .flickity-viewport {
@@ -39,5 +38,10 @@
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  img {
+    width: 20vw;
+    max-width: 100px;
   }
 }
